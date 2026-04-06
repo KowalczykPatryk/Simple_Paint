@@ -1,4 +1,4 @@
-# 🎨 Simple_Paint
+# Simple_Paint
 
 Projekt stworzony w C++ z wykorzystaniem **SFML 3.0.2**, **Dear ImGui** oraz **ImGui-SFML**.  
 Pozwala na rysowanie prostych kształtów, zmianę kolorów i zapisywanie obrazu — prosty edytor graficzny typu *paint*.
@@ -13,9 +13,9 @@ Pozwala na rysowanie prostych kształtów, zmianę kolorów i zapisywanie obrazu
 
 ---
 
-## 🚀 Uruchomienie projektu na Linuxie
+## Uruchomienie projektu na Linuxie
 
-### 1️⃣ Zainstaluj wymagane narzędzia i biblioteki systemowe
+### Zainstaluj wymagane narzędzia i biblioteki systemowe
 
 ```bash
 sudo apt update
@@ -27,9 +27,9 @@ libopenal-dev libflac-dev libvorbis-dev libfreetype-dev libgl1-mesa-dev
 
 ---
 
-### 2️⃣ Zbuduj SFML 3.0.2 z dynamicznymi bibliotekami `.so`
+### Zbuduj SFML 3.0.2 z dynamicznymi bibliotekami `.so`
 
-⚠️ Uwaga: pakiet `libsfml-dev` z `apt` instaluje **wersję 2.6.x**,
+Uwaga: pakiet `libsfml-dev` z `apt` instaluje **wersję 2.6.x**,
 a ten projekt wymaga **SFML 3.x**.
 
 ```bash
@@ -52,7 +52,7 @@ sudo ldconfig
 
 ---
 
-### 3️⃣ Pobierz potrzebne biblioteki GUI
+### Pobierz potrzebne biblioteki GUI
 
 ```bash
 # ImGui (interfejs użytkownika)
@@ -73,7 +73,7 @@ git clone https://github.com/aiekick/ImGuiFileDialog
 
 ---
 
-### 4️⃣ Poprawka w kodzie `imgui-sfml`
+### Poprawka w kodzie `imgui-sfml`
 
 W pliku `imgui-sfml/imgui-SFML.cpp` należy zakomentować linię **956**, aby uniknąć błędu podczas kompilacji.
 
@@ -82,7 +82,7 @@ nano +956 imgui-sfml/imgui-SFML.cpp
 ```
 ---
 
-### 6️⃣ Kompilacja projektu
+### Kompilacja projektu
 
 ```bash
 g++ -std=c++17 -O2 \
@@ -101,7 +101,7 @@ ImGuiFileDialog/ImGuiFileDialog.cpp \
 
 ---
 
-### 7️⃣ Uruchomienie
+### Uruchomienie
 
 ```bash
 ./lab02
@@ -109,29 +109,29 @@ ImGuiFileDialog/ImGuiFileDialog.cpp \
 
 ---
 
-## 💡 Ideas for Further Development:
+## Ideas for Further Development:
 
-🧭 Undo/Redo functionality — allow reverting and reapplying recent actions.
+- Undo/Redo functionality — allow reverting and reapplying recent actions.
 
-🧹 Clear canvas on "New" button — automatically clear the workspace when creating a new file.
+- Clear canvas on "New" button — automatically clear the workspace when creating a new file.
 
-🎨 Live gradient preview — currently, two-color lines are saved with gradients, but the live preview is missing.
+- Live gradient preview — currently, two-color lines are saved with gradients, but the live preview is missing.
 
-🧱 Drawing order fix — ensure that newly added elements appear on top (layered correctly).
+- Drawing order fix — ensure that newly added elements appear on top (layered correctly).
 
-🧩 Polymorphic shape system — implement inheritance for shapes (e.g., base Shape class) and store them in a single vector.
+- Polymorphic shape system — implement inheritance for shapes (e.g., base Shape class) and store them in a single vector.
 
-🔺 Add more shapes — support for triangles, ellipses, polygons, stars, etc.
+- Add more shapes — support for triangles, ellipses, polygons, stars, etc.
 
-🖱️ Shape interaction — enable selecting, moving, resizing, and deleting shapes.
+- Shape interaction — enable selecting, moving, resizing, and deleting shapes.
 
-🔤 Text tool — allow adding text elements to the canvas.
+- Text tool — allow adding text elements to the canvas.
 
 ---
 
 
 
-## 🧾 Licencja
+## Licencja
 
 Projekt udostępniony na licencji [MIT](https://opensource.org/licenses/MIT).
 
